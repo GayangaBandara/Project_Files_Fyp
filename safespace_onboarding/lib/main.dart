@@ -1,21 +1,24 @@
-// main.dart
 import 'package:flutter/material.dart';
+import 'theme/theme.dart';
 import 'screens/onboarding/onboarding_screen.dart';
+import 'screens/onboarding/user_details_screen.dart';
 import 'screens/home_screen.dart';
 
+void main() => runApp(const MyApp());
 
-void main() => runApp(SafeSpaceApp());
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
-class SafeSpaceApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
       title: 'SafeSpace',
-      theme: ThemeData(primarySwatch: Colors.teal),
-      home: OnboardingScreen(),
+      theme: lightMode,
+      debugShowCheckedModeBanner: false,
+      home: const OnboardingScreen(),
       routes: {
-        "/home": (context) => HomeScreen(),
+        "/details": (context) => const UserDetailsScreen(),
+        "/home": (context) => const HomeScreen(),
       },
     );
   }

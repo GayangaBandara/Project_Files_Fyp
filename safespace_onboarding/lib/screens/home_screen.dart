@@ -1,20 +1,19 @@
-// TODO Implement this library.
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.teal.shade50,
-      body: Center(
+      appBar: AppBar(
+        title: const Text("SafeSpace"),
+        centerTitle: true,
+      ),
+      body: const Center(
         child: Text(
-          'Safe Space',
-          style: TextStyle(
-            fontSize: 32,
-            fontWeight: FontWeight.bold,
-            color: Colors.teal.shade700,
-            fontFamily: 'Arial Rounded',
-          ),
+          "Welcome to SafeSpace!",
+          style: TextStyle(fontSize: 22),
         ),
       ),
     );
